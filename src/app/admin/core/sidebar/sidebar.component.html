@@ -1,0 +1,108 @@
+<div class="side-bar">
+    <h2>
+        <label>digital</label>signage</h2>
+    <ul>
+        <li routerLinkActive="active">
+            <a routerLink="/admin/monitor">
+                <i class="menu-ico m-monitor" aria-hidden="true"></i>
+                <span class="hidden-xs hidden-sm">Giám sát</span>
+            </a>
+        </li>
+        <li routerLinkActive="active">
+            <a routerLink="/admin/report">
+                <i class="menu-ico m-report" aria-hidden="true"></i>
+                <span class="hidden-xs hidden-sm">Báo cáo</span>
+            </a>
+            <ul>
+                <li>
+                    <a routerLink="/admin/report/campaign">
+                        <i class="menu-ico m-content" aria-hidden="true"></i>
+                        <span class="hidden-xs hidden-sm">Báo cáo chiến dịch</span>
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="/admin/report/performance">
+                        <i class="menu-ico m-content" aria-hidden="true"></i>
+                        <span class="hidden-xs hidden-sm">Báo cáo hiệu năng</span>
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="/admin/report/action">
+                        <i class="menu-ico m-content" aria-hidden="true"></i>
+                        <span class="hidden-xs hidden-sm">Báo cáo hoạt động</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li routerLinkActive="active">
+            <a routerLink="/admin/content/list">
+                <i class="menu-ico m-content" aria-hidden="true"></i>
+                <span class="hidden-xs hidden-sm">Content</span>
+            </a>
+            <ul>
+                <li>
+                    <a routerLink="/admin/content">
+                        <i class="menu-ico m-content" aria-hidden="true"></i>
+                        <span class="hidden-xs hidden-sm">Tạo mới content</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li routerLinkActive="active">
+            <a routerLink="/admin/campaign">
+                <i class="menu-ico m-campaign" aria-hidden="true"></i>
+                <span class="hidden-xs hidden-sm">Quản lý chiến dịch</span>
+            </a>
+        </li>
+        <li routerLinkActive="active">
+            <a>
+                <i class="menu-ico m-config" aria-hidden="true"></i>
+                <span class="hidden-xs hidden-sm">Cấu hình</span>
+            </a>
+            <ul class="sub-mutiple">
+                <li>
+                    <a (click)="setLevel(2)" routerLink="/admin/config/area/0">
+                        <i class="menu-ico m-content" aria-hidden="true"></i>
+                        <span class="hidden-xs hidden-sm">Khu vực</span>
+                    </a>
+                </li>
+                <li>
+                    <a (click)="setLevel(1)" routerLink="/admin/config/area/1">
+                        <i class="menu-ico m-content" aria-hidden="true"></i>
+                        <span class="hidden-xs hidden-sm">Chi nhánh</span>
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="/admin/config/area/2">
+                        <i class="menu-ico m-content" aria-hidden="true"></i>
+                        <span class="hidden-xs hidden-sm">Cửa hàng</span>
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="/admin/config/devices">
+                        <i class="menu-ico m-content" aria-hidden="true"></i>
+                        <span class="hidden-xs hidden-sm">Thiết bị</span>
+                    </a>
+                </li>
+                <!-- <li>
+                    <a routerLink="/admin/report">
+                        <i class="menu-ico m-content" aria-hidden="true"></i>
+                        <span class="hidden-xs hidden-sm">Layout</span>
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="/admin/report">
+                        <i class="menu-ico m-content" aria-hidden="true"></i>
+                        <span class="hidden-xs hidden-sm">Tạo mới content</span>
+                    </a>
+                </li> -->
+            </ul>
+        </li>
+        <li routerLinkActive="active">
+            <a routerLink="/admin/report">
+                <i class="menu-ico m-library" aria-hidden="true"></i>
+                <span class="hidden-xs hidden-sm">Library</span>
+            </a>
+        </li>
+    </ul>
+</div>

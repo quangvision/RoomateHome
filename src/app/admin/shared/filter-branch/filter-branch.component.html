@@ -1,0 +1,48 @@
+<div class="row">
+    <div [ngClass]="{'col-md-4': device, 'col-md-3': !device }">
+        <h3>Khu vực</h3>
+        <div class="filter-box">
+            <div *ngFor="let br of area">
+                <input type="checkbox" class="filled-in" id="{{br.id}}" checked="checked " [(ngModel)]="br.selected" />
+                <label for="{{br.id}}">{{br.name}}</label>
+            </div>
+        </div>
+
+    </div>
+    <div [ngClass]="{'col-md-4': device, 'col-md-3': !device }">
+
+        <h3>Chi nhánh</h3>
+        <div class="filter-box">
+            <div *ngFor="let br of branch | areaLibParent: selectedAreaParent">
+
+                <!-- <div *ngFor="let br of filterBranches | areaParent: selectedAreaParent"> -->
+                <input type="checkbox" class="filled-in" id="{{br.id}}" checked="checked " [(ngModel)]="br.selected" />
+                <label for="{{br.id}}">{{br.name}}</label>
+            </div>
+        </div>
+
+    </div>
+    <div [ngClass]="{'col-md-4': device, 'col-md-3': !device }">
+
+        <h3>Cửa hàng</h3>
+        <div class="filter-box">
+            <div *ngFor="let br of store | branchLibParent: selectedBranchesParent">
+
+                <!-- <div *ngFor="let br of filterStores | branchParent: selectedBranchesParent"> -->
+                <input type="checkbox" class="filled-in" id="{{br.id}}" checked="checked" [(ngModel)]="br.selected" (change)="setService()" />
+                <label for="{{br.id}}">{{br.name}}</label>
+            </div>
+        </div>
+
+    </div>
+    <div class="col-md-3" *ngIf="device == false">
+        <h3>Thiết bị</h3>
+        <div class="filter-box">
+            <div *ngFor="let d of allDevice | deviceLibByBranch: selectedBranchesCommon">
+                <input type="checkbox" class="filled-in" id="{{d.id}}" [(ngModel)]="d.selected" [ngModelOptions]="{standalone: true}" (change)="setService()" />
+                <label for="{{d.id}}">{{d.name}}</label>
+            </div>
+        </div>
+
+    </div>
+</div>

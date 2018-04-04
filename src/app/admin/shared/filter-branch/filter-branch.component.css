@@ -1,0 +1,6 @@
+.filter-box {
+    padding: 10px;
+    border: solid 1px #dfe0e2;
+    height: 100px;
+    overflow: auto;
+}

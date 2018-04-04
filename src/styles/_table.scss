@@ -1,0 +1,59 @@
+.tbl-striped {
+    width: 100%;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    thead {
+        background: #f4f4f4;
+        border: 1px solid #ddd;
+        text-transform: uppercase;
+        color: #555555;
+        font-family: 'Lato-Semibold';
+        th {
+            text-align: center;
+            border-right: 1px solid #ddd;
+            padding: 8px 10px;
+            &:last-child {
+                border-right: 0;
+            }
+        }
+        td {
+            text-align: center;
+            padding: 10px 0;
+        }
+    }
+    tbody {
+        border-left: 1px solid #ddd;
+        border-right: 1px solid #ddd;
+        tr {
+            background: #fff;
+            border-bottom: 1px solid #ddd;
+            td {
+                text-align: center;
+                border-right: 1px solid #ddd;
+                vertical-align: middle;
+                padding: 10px 8px;
+                font-family: 'Lato-Medium';
+                font-size: 16px;
+                &:last-child {
+                    border-right: 0;
+                }
+                &.editRow {
+                    cursor: pointer;
+                    &:hover {
+                        color: #2199e8;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.tbl-edit {
+    tbody {
+        tr {
+            td:first-child:hover {
+                color: #00afee;
+            }
+        }
+    }
+}
